@@ -12,6 +12,6 @@
 
     <preference name="StatusBarOverlaysWebView" value="false" />
     <!-- edit this to change the background color of your statusbar -->
-    <preference name="StatusBarBackgroundColor" value="#ca0002" />
+    <preference name="StatusBarBackgroundColor" value="#d24300" />
 
 </widget>

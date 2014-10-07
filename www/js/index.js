@@ -39,7 +39,7 @@ rssreaderapp.app = {
 
     get_blog_data: function() {
         var app = this;
-        $.get("http://rss.cnn.com/rss/cnn_topstories.rss", function(data) {
+        $.get("http://www.percona.com/blog/feed/", function(data) {
             app.blogData = $(data).find("item").map(function(i, item) {
                 return { 
                     url: $(item).find("link").text(),
