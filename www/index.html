@@ -31,14 +31,27 @@
         <script type="text/javascript" src="lib/jquery-mobile/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="lib/jquery-mobile-router/js/jquery.mobile.router.min.js"></script>
         <script type="text/javascript" src="lib/jquery-mobile/js/jquery.mobile-1.4.4.min.js"></script>
+        <script type="text/javascript" src="lib/jquery-mobile/datejs/date.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 		
     </head>
 
     <body>
         <div data-role="page" id="home">
+            <div data-role="panel" id="panel-menu" data-position="left" data-position-fixed="true" data-display="overlay" class="panel left">
+                <ul data-role="listview">
+                    <li>Menu</li>
+                    <li><a href="#home" data-rel="close">Performance Blog</a></li>
+                    <li><a href="#percona-live" data-transition="slide">Percona Live</a></li>
+                    <li><a href="#software" data-transition="slide">Our software</a></li>
+                    <li><a href="#services" data-transition="slide">Our services</a></li>
+                    <li><a href="#about-percona" data-transition="slide">About Percona</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+
             <div data-role="header" data-position="fixed">
-                <h1 class="logo">Percona Performance Blog</h1>
+                <h1 class="logo">Percona Performance Blog</h1><a href="#panel-menu" data-icon="bars" class="ui-btn-left">Menu</a>
             </div>
 
             <div role="main" data-role="ui-content" id="home-content">
@@ -46,10 +59,89 @@
             </div>
         </div>
 
+        <div data-role="page" id="percona-live">
+            <div data-role="header" data-position="fixed">
+                <h1 class="logo"></h1><a href="#home" data-transition="slide" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">Home</a>
+            </div>
+
+            <div role="main" class="ui-content">
+                <h2>Percona Live MySQL Conferences</h2>
+                <h3>Discover the Power of MySQL</h3>
+                <p>The Percona Live conference series are focused on bringing MySQL users to a whole new level of understanding.</p>
+                <p>These MySQL summits are technical and focus on the core topics you need to be successful with MySQL.</p>
+                <p>At Percona Live, you'll benefit from the expertise of the most accomplished system architects and developers in the business. You'll see how to tackle your old problems in a whole new way.</p>
+                <p>Find out more about <a href="#" onclick="window.open('http://www.percona.com/live/conferences', '_system');">Percona Live MySQL Conferences</a>.</p>
+            </div>
+        </div>
+
+        <div data-role="page" id="software">
+            <div data-role="header" data-position="fixed">
+                <h1 class="logo"></h1><a href="#home" data-transition="slide" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">Home</a>
+            </div>
+
+            <div role="main" class="ui-content">
+                <h2>Percona Software</h2>
+                <h3>Percona Server</h3>
+                <p>Percona Server is an enhanced, drop-in MySQL® replacement which has been downloaded more than 1,000,000 times. Version 5.6 is now available.</p>
+                <h3>Percona XtraDB Cluster</h3>
+                <p>Percona XtraDB Cluster is an active/active high availability and high scalability open source solution for MySQL® clustering. It integrates Percona Server and Percona XtraBackup with the Galera library of MySQL high availability solutions in a single package which enables you to create a cost-effective MySQL high availability cluster. Percona XtraDB Cluster has been downloaded over 150,000 times since its launch in April 2012.</p>
+                <h3>Percona XtraBackup</h3>
+                <p>Percona XtraBackup is an open source, free MySQL® hot backup software that performs non-blocking backups for InnoDB and XtraDB databases.</p>
+                <h3>Percona Toolkit</h3>
+                <p>Percona Toolkit for MySQL is a collection of advanced command-line tools (which our own Percona MySQL Support staff uses) to perform a variety of MySQL server and system tasks that are too difficult or complex to perform manually.</p>
+                <p>Find out more about <a href="#" onclick="window.open('http://www.percona.com/software', '_system');">Percona software</a>.</p>
+            </div>
+        </div>
+
+        <div data-role="page" id="services">
+            <div data-role="header" data-position="fixed">
+                <h1 class="logo"></h1><a href="#home" data-transition="slide" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">Home</a>
+            </div>
+
+            <div role="main" class="ui-content">
+                <h2>Percona Services</h2>
+                <h3>Support</h3>
+                <p>Percona MySQL Support is a highly responsive, effective, affordable option to ensure the continuous performance of your MySQL® deployment. Our user-friendly Support professionals are accessible 24x7 online or by phone to ensure that your MySQL installation is running optimally. We can help you increase your uptime, be more productive, reduce your support budget, and implement fixes for performance issues faster.</p>
+                <h3>Consulting</h3>
+                <p>Percona consultants have decades of experience solving complex MySQL issues. Our global 24/7/365 consulting team has worked with over 2,000 clients worldwide, including the largest MySQL users on the Internet, who use MySQL®, Percona Server, Amazon® RDS for MySQL, and MariaDB®. Our consultants generally work remotely but can come onsite. We can also provide full-time or part-time interim staff to cover employee absences or provide extra help on big projects.</p>
+                <h3>Managed Services</h3>
+                <p>We leverage our deep operational knowledge of MySQL to provide Percona Managed Services for MySQL database administration or backup management.</p>
+                <p>Find out more about <a href="#" onclick="window.open('http://www.percona.com/products', '_system');">Percona services</a>.</p>
+            </div>
+        </div>
+
+        <div data-role="page" id="about-percona">
+            <div data-role="header" data-position="fixed">
+                <h1 class="logo"></h1><a href="#home" data-transition="slide" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">Home</a>
+            </div>
+
+            <div role="main" class="ui-content">
+                <h2>About Percona</h2>
+                <h3>Experts in MySQL and InnoDB Performance</h3>
+                <p>Percona is the oldest and largest independent MySQL Support, Consulting, Managed Services, Training, and Software Development company with a global, 24x7 staff of over 100 serving more than 2,000 customers in 50+ countries since 2006. Our MySQL services clients and open source software users achieve breakthrough results with MySQL: cost savings, faster time to market, higher system up-time, and long-term scalability. MySQL performance is a focus for all that we do.</p>
+                <p>Our contributions to the MySQL community include open source server and tools software, books, and original research published on the MySQL Performance Blog. Our MySQL database software variant, Percona Server, is used by many leading Internet companies and has been downloaded over 1,000,000 times. Percona XtraBackup and Percona Toolkit have both been downloaded hundreds of thousands of times and are compatible with MySQL, Percona Server, and MariaDB. Percona XtrDB Cluster is a powerful, open source solution for high availability MySQL which is widely used for both on premise and cloud-based deployments including broad use with OpenStack. We also organize the highly popular Percona Live MySQL conferences where community members connect and share knowledge.</p>
+                <p>Find out more about <a href="#" onclick="window.open('http://www.percona.com/about-percona', '_system');">Percona</a>.</p>
+            </div>
+        </div>
+
+        <div data-role="page" id="contact-us">
+            <div data-role="header" data-position="fixed">
+                <h1 class="logo"></h1><a href="#home" data-transition="slide" data-direction="reverse" data-icon="arrow-l" class="ui-btn-left">Home</a>
+            </div>
+
+            <div role="main" class="ui-content">
+                <h2>Contact Us</h2>
+                <h3>Contact Us 24 Hours A Day</h3>
+                <p>Sales North America: <a href="tel:8883169775">(888) 316-9775</a> or <a href="tel:2084732904">(208) 473-2904</a></p>
+                <p>Sales Europe: +44-208-133-0309 (UK) or 0-800-051-8984 (UK Toll Free) or 0-800-181-0665 (GER Toll Free)</p>
+                <p>Find out more about <a href="#" onclick="window.open('http://www.percona.com/contact/sales', '_system');">more ways to contact Percona</a>.</p>
+            </div>
+        </div>
+
         <script id="blog-list-template" type="text/x-handlebars-template">
             <ul id="blog-list" data-role="listview">
-                {{#.}}<li><a style="white-space:normal" href="#post?{{@index}}" data-transition="slide">{{title}}<br>
-                <div id="blog-list-date">{{publishDate}}</div></a></li>{{/.}}
+                {{#.}}<li data-icon="false"><a style="white-space:normal" href="#post?{{@index}}" data-transition="slide">{{title}}<br>
+                <div id="blog-list-date">{{author}} | {{publishDate}}</div></a></li>{{/.}}
             </ul>
         </script>
 
