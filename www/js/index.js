@@ -31,6 +31,11 @@ rssreaderapp.app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         this.postTemplate = Handlebars.compile($("#post-template").html());
         this.blogListTemplate = Handlebars.compile($("#blog-list-template").html());
+
+        var app = this;
+        $("#home-refresh-btn").click(function() {
+            app.get_blog_data();
+        });
     },
 
     homeBeforeCreate: function(event, args) {
