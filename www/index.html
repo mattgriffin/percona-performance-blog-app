@@ -39,18 +39,19 @@
         <div data-role="page" id="home">
             <div data-role="panel" id="panel-menu" data-position="left" data-position-fixed="true" data-display="overlay" class="panel left">
                 <ul data-role="listview">
-                    <li>Menu</li>
-                    <li><a href="#home" data-rel="close">Percona Performance Blog</a></li>
+                    <li><a href="#home" data-rel="close" data-transition="slide" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
                     <li><a href="#percona-live" data-transition="slide">Percona Live</a></li>
                     <li><a href="#software" data-transition="slide">Our software</a></li>
                     <li><a href="#services" data-transition="slide">Our services</a></li>
                     <li><a href="#about-percona" data-transition="slide">About Percona</a></li>
                     <li><a href="#contact-us" data-transition="slide">Contact Us</a></li>
                 </ul>
+                <p>&nbsp;</p>
+                <p><a href="" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline">Close</a></p>
             </div>
 
             <div data-role="header" data-position="fixed">
-                <h1 class="logo">Percona Performance Blog</h1><a href="#panel-menu" data-icon="bars" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-notext"></a><a data-icon="refresh" class="ui-btn ui-btn-right ui-icon-refresh ui-btn-icon-notext" id="home-refresh-btn"></a>
+                <h1 class="logo">Percona Performance Blog</h1><a href="#panel-menu" class="ui-btn-left">Menu</a>
             </div>
 
             <div role="main" data-role="ui-content" id="home-content">
