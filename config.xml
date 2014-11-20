@@ -15,6 +15,7 @@
     <preference name="StatusBarBackgroundColor" value="#d24300" />
 
     <preference name = "EnableViewportScale" value="true" />
+    <preference name = "DisallowOverscroll" value="true" />
 
     <platform name="ios">     
               <!-- iOS 7.0+ -->
